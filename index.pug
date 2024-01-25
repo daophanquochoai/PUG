@@ -20,41 +20,50 @@ body
                     p Đăng nhập 
                 .register.d-none 
                     p Đăng ký 
+    .section-link
+        .container.d-flex.justify-content-center
+            .link-job.link Việc làm 
+            .link-cmp.link Công ty
+    //- Thanh narbar
     .container 
-        .vitri 
-            .vt 
-                input(type="text" name="position" placeholder="Vị trí tuyển dụng" style="border: none; width: 200px; height: 50px;")
-            .khuvuc  
-                select(name="khuvuc" id="khuvuc")
-                    option(value="kvuc") Tất cả tỉnh/thành phố
-                    option(value="TPHCM") TP Hồ Chí Minh
-                    option(value="HN") Hà Nội
-                    option(value="NT") Nha Trang
-                    option(value="Hue") Huế
-        .kinhnghiem 
-            select(name="exp" id="exp")
-                option(value="kn") Tất cả kinh nghiệm
-                option(value="none") Chưa có kinh nghiệm
-                option(value="duoi1nam") Dưới 1 năm
-                option(value="1nam") 1 năm
-                option(value="2nam") 2 năm
-                option(value="3nam") 3 năm
-                option(value="4nam") 4 năm
-                option(value="5nam") 5 năm
-                option(value="tren5nam") Trên 5 năm
-        .luong 
-            select(name="luong" id="luong")
-                option(value="luong") Chọn mức lương
-                option(value="duoi10") Dưới 10 triệu
-                option(value="10den15") 10 - 15 triệu
-                option(value="15den20") 15 - 20 triệu
-                option(value="tren20") Trên 20 triệu
-        .tim
-        
-            button(type='button') Tìm kiếm
+        .navbar-contai.row.row-cols-2.row-cols-lg-4
+            .item-nav.col-12.col-sm-12.col-lg-12.col-xl-4.p-2
+                .vitri.d-flex.align-items-center
+                    .vt 
+                        input(type="text" name="position" placeholder="Vị trí tuyển dụng" style="border: none; width: 200px; height: 50px;")
+                    .khuvuc  
+                        select(name="khuvuc" id="khuvuc")
+                            option(value="kvuc") Tất cả tỉnh/thành phố
+                            option(value="TPHCM") TP Hồ Chí Minh
+                            option(value="HN") Hà Nội
+                            option(value="NT") Nha Trang
+                            option(value="Hue") Huế
+            .item-nav.col-sm-6.col-lg-4.col-xl-3.p-2
+                .kinhnghiem 
+                    select(name="exp" id="exp")
+                        option(value="kn") Tất cả kinh nghiệm
+                        option(value="none") Chưa có kinh nghiệm
+                        option(value="duoi1nam") Dưới 1 năm
+                        option(value="1nam") 1 năm
+                        option(value="2nam") 2 năm
+                        option(value="3nam") 3 năm
+                        option(value="4nam") 4 năm
+                        option(value="5nam") 5 năm
+                        option(value="tren5nam") Trên 5 năm
+            .item-nav.col-sm-6.col-lg-4.col-xl-3.p-2
+                .luong 
+                    select(name="luong" id="luong")
+                        option(value="luong") Chọn mức lương
+                        option(value="duoi10") Dưới 10 triệu
+                        option(value="10den15") 10 - 15 triệu
+                        option(value="15den20") 15 - 20 triệu
+                        option(value="tren20") Trên 20 triệu
+            .item-nav.col-sm-6.col-lg-4.col-xl-2.p-2
+                .tim
+                    button(type='button') Tìm kiếm
     
-
-    .section-list.containerp
+    //- Hien thi trang 1 CV (10 trang)
+    .section-list.container
         .section-item.row.row-cols-1.row-cols-md-2.row-cols-lg-4.p-4
             .item.col-sm-12.col-md-6.col-lg-4.col-xl-3.mb-4.p-2
                 .box.p-4
@@ -345,6 +354,19 @@ body
                             .ungtuyen.animate__pulse Ứng tuyển 
                         .button.xem Xem >>
             
+    .footer 
+        .box-item.d-flex.justify-content-between
+            .footer-info 
+                p N21DCCN032 - Đào Phan Quốc Hoài 
+                p N21DCCN076 - Lê Đức Thái 
+                p N21DCCN017 - Hoàng Linh Điệp
+            .footer-slogan
+                p Khám Phá Sự Sáng Tạo và Đam Mê
+                p Hãy Cùng Nhau Xây Dựng Tương Lai Tươi Sáng
+            .footer-logo 
+                p Học viện Công Nghệ Bưu Chính Viễn Thông cơ sở Hồ Chí Minh 
+                p  Cơ sở Quận 1: 11 Nguyễn Đình Chiểu, Phường Đa Kao, Quận 1, TP. Hồ Chí Minh
+                p Cơ sở Thủ Đức: 97 Man Thiện, Phường Hiệp Phú, Thủ Đức, TP. Hồ Chí Minh
             
 
             
