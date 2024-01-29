@@ -1,0 +1,196 @@
+doctype html
+header 
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous")
+    link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
+    link(href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet')
+    link(rel="stylesheet", href="../css/chitietCV.css")
+    title Tuyen dung
+body 
+    .header
+        .container.d-flex.justify-content-between.align-items-center
+            .container-logo.d-flex.align-items-center.justify-content-center
+                <span>T</span>uyen<span>d</span>ung 
+            .container-info.d-flex.d-flex.align-items-center.justify-content-center
+                .notice
+                    img(src="../notification-bell.png", alt="notice")
+                .info.d-flex.align-items-center.justify-content-center
+                    .box-img.d-flex.align-items-center.justify-content-center
+                        img(src="../user-circle-solid-24.png", alt="user")
+                    span.name Dao Phan Quoc Hoai
+                .login.d-none
+                    p Đăng nhập 
+                .register.d-none 
+                    p Đăng ký 
+    .section-body.container.mb-5
+        .row
+            .container-left.col-sm-12.col-lg-8.mb-5
+                .item-top.d-flex.justify-content-between.align-items-center
+                    .item-title
+                        .title-cv Inter Java Spring  
+                        .title-cmp Fpt Software
+                    .item-info
+                        .kinhnghiem
+                            p <box-icon name='xing' type='logo' ></box-icon> Kinh nghiệm : 8 - 12 năm 
+                        .luong 
+                            p <box-icon name='money' ></box-icon> Lương : 800$
+                        .hanchot 
+                            p <box-icon class='bx-flashing' type='solid' name='alarm-exclamation'></box-icon> Hạn chót : 10/03/2003
+                .item-bot.col-12
+                    .item-bot-title.d-flex.align-items-center 
+                        .hang
+                        .title-chitiet Chi tiết tuyển dụng 
+                    ul Mô tả tuyển dụng 
+                        li điều 1
+                        li điều 2
+                        li điều 3
+                        li điều 4
+                    ul Yều cầu ứng viên 
+                        li điều 1
+                        li điều 2
+                        li điều 3
+                        li điều 4
+                    ul Quyền lợi
+                        li điều 1
+                        li điều 2
+                        li điều 3
+                        li điều 4
+                    ul Địa Điểm và thời gian làm việc 
+                        li điều 1
+                        li điều 2
+                        li điều 3
+                        li điều 4
+                button(class="btn btn-outline-success button-ungtuyen my-2" onClick="openUngTuyen()") Ứng tuyển
+                .hanchot.d-flex.align-items-center
+                    .burst-div.me-2
+                    p.p-0.m-0 <i>Hạn chót vào ngày 10/03/2003</i>
+            .box-ungtuyen
+                form.p-2
+                    .from-header.d-flex.justify-content-between.align-items-center
+                        p.title-cv Ứng tuyển vị trí <span>Inter Java Spring</span>
+                        p(class="exit" onClick="closeUngTuyen()") X
+                    .form-body.row.d-flex.align-items-center
+                        .upload.col-sm-12.col-md-6
+                            label(for="fileInput" class="d-flex align-items-center") <box-icon name='upload'></box-icon> Tải lên cv từ máy
+                            input(type="file" id="fileInput" name="file" accept=".pdf, .doc, .docx" class="input_file" style="visibility:hidden" onChange="upload()")                       
+                        select.col-sm-12.col-md-6 
+                            option(value="" disabled selected hidden) Vị trí ứng tuyển 
+                            option(value="Hồ Chí Minh") Hồ Chí Minh
+                            option(value="Đà Nẵng") Đà Nẵng
+                    button.ungtuyen Nộp CV
+            div(class="overplay" onClick="closeUngTuyen()")
+            .container-right.col-sm-12.col-lg-4
+                .box-top.d-flex.justify-content-between.align-items-center
+                    .logo-cmp 
+                        img(src="https://inkythuatso.com/uploads/thumbnails/800/2021/11/logo-fpt-inkythuatso-1-01-01-14-33-35.jpg", alt="logo công ty")
+                        .name-cmp FPT Software 
+                    .box-item
+                        .quymo 
+                            box-icon(name='building-house')
+                            p 100-200 nhân viên 
+                        .locate 
+                            box-icon(name='location-plus' type='solid')
+                            p 79 - Man Thiện
+                .box-bot 
+                    .box-item.p-2
+                        .item.p-2
+                            .item-top.d-flex.mb-2
+                                .item-img
+                                    img(src="https://inkythuatso.com/uploads/thumbnails/800/2021/11/logo-fpt-inkythuatso-1-01-01-14-33-35.jpg", alt="logo công ty")
+                                .ttle-job.ms-4
+                                    .name-job Intern Java Spring
+                                    //- Điền vào tên
+                                    .name-comp Fpt Software
+                                    //- Điền tên công ty 
+                            .item-bot
+                                .info-job 
+                                    span.desr $10000
+                                    span.desr 30 ngày trước 
+                                .button-xem.d-flex.justify-content-between
+                                    .empty 
+                                    .ungtuyen.animate__pulse Xem >>
+                    .box-item.p-2
+                        .item.p-2
+                            .item-top.d-flex.mb-2
+                                .item-img
+                                    img(src="https://inkythuatso.com/uploads/thumbnails/800/2021/11/logo-fpt-inkythuatso-1-01-01-14-33-35.jpg", alt="logo công ty")
+                                .ttle-job.ms-4
+                                    .name-job Intern Java Spring
+                                    //- Điền vào tên
+                                    .name-comp Fpt Software
+                                    //- Điền tên công ty 
+                            .item-bot
+                                .info-job 
+                                    span.desr $10000
+                                    span.desr 30 ngày trước 
+                                .button-xem.d-flex.justify-content-between
+                                    .empty 
+                                    .ungtuyen.animate__pulse Xem >>
+                    .box-item.p-2
+                        .item.p-2
+                            .item-top.d-flex.mb-2
+                                .item-img
+                                    img(src="https://inkythuatso.com/uploads/thumbnails/800/2021/11/logo-fpt-inkythuatso-1-01-01-14-33-35.jpg", alt="logo công ty")
+                                .ttle-job.ms-4
+                                    .name-job Intern Java Spring
+                                    //- Điền vào tên
+                                    .name-comp Fpt Software
+                                    //- Điền tên công ty 
+                            .item-bot
+                                .info-job 
+                                    span.desr $10000
+                                    span.desr 30 ngày trước 
+                                .button-xem.d-flex.justify-content-between
+                                    .empty 
+                                    .ungtuyen.animate__pulse Xem >>
+                    .box-item.p-2
+                        .item.p-2
+                            .item-top.d-flex.mb-2
+                                .item-img
+                                    img(src="https://inkythuatso.com/uploads/thumbnails/800/2021/11/logo-fpt-inkythuatso-1-01-01-14-33-35.jpg", alt="logo công ty")
+                                .ttle-job.ms-4
+                                    .name-job Intern Java Spring
+                                    //- Điền vào tên
+                                    .name-comp Fpt Software
+                                    //- Điền tên công ty 
+                            .item-bot
+                                .info-job 
+                                    span.desr $10000
+                                    span.desr 30 ngày trước 
+                                .button-xem.d-flex.justify-content-between
+                                    .empty 
+                                    .ungtuyen.animate__pulse Xem >>
+                    .box-item.p-2
+                        .item.p-2
+                            .item-top.d-flex.mb-2
+                                .item-img
+                                    img(src="https://inkythuatso.com/uploads/thumbnails/800/2021/11/logo-fpt-inkythuatso-1-01-01-14-33-35.jpg", alt="logo công ty")
+                                .ttle-job.ms-4
+                                    .name-job Intern Java Spring
+                                    //- Điền vào tên
+                                    .name-comp Fpt Software
+                                    //- Điền tên công ty 
+                            .item-bot
+                                .info-job 
+                                    span.desr $10000
+                                    span.desr 30 ngày trước 
+                                .button-xem.d-flex.justify-content-between
+                                    .empty 
+                                    .ungtuyen.animate__pulse Xem >>
+    .footer
+        .box-item.d-flex.justify-content-between
+            .footer-info 
+                p N21DCCN032 - Đào Phan Quốc Hoài 
+                p N21DCCN076 - Lê Đức Thái 
+                p N21DCCN017 - Hoàng Linh Điệp
+            .footer-slogan
+                p Khám Phá Sự Sáng Tạo và Đam Mê
+                p Hãy Cùng Nhau Xây Dựng Tương Lai Tươi Sáng
+            .footer-logo 
+                p Học viện Công Nghệ Bưu Chính Viễn Thông cơ sở Hồ Chí Minh 
+                p  Cơ sở Quận 1: 11 Nguyễn Đình Chiểu, Phường Đa Kao, Quận 1, TP. Hồ Chí Minh
+                p Cơ sở Thủ Đức: 97 Man Thiện, Phường Hiệp Phú, Thủ Đức, TP. Hồ Chí Minh
+            
+    script(src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js")
+    script(src="../js/chitietCV.js")
+
+            
